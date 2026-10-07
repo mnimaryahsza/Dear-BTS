@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEAR, BTS. — Moderação</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+:root{--bg:#06050a;--panel:#120d1b;--panel2:#1a1125;--purple:#a970ff;--purple2:#d6bbff;--gold:#f0cf7d;--white:#fffaff;--muted:#b6aec0;--line:#3a2850;--danger:#ec8c9d;--green:#a8e3bf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050409;color:var(--white);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh}button,input{font:inherit}button{cursor:pointer;color:inherit}body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 0%,#35155c55 0,transparent 28%),radial-gradient(circle at 85% 30%,#47216b18,transparent 25%);z-index:-1}.wrap{width:min(1180px,92vw);margin:0 auto}.top{padding:26px 0 18px;border-bottom:1px solid #2c2038;display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-weight:800;letter-spacing:.18em}.brand small{display:block;color:var(--gold);font-size:.63rem;letter-spacing:.22em;margin-top:5px}.btn{border:1px solid #71558f;background:#1b1126;border-radius:12px;padding:10px 14px;font-size:.78rem;font-weight:800}.btn:hover{border-color:#be9cff;background:#28163b}.btn.primary{background:linear-gradient(135deg,#a064ff,#6c36ae);border-color:#c9a9ff}.btn.green{border-color:#4e8564;background:#14251c}.btn.red{border-color:#8a4453;background:#251018}.btn.gold{border-color:#8b7444;background:#211a0e}.login{min-height:88vh;display:flex;align-items:center;justify-content:center}.login-card,.panel{background:linear-gradient(145deg,#120d1bf2,#0b0810f2);border:1px solid var(--line);border-radius:24px;box-shadow:0 30px 90px #0009}.login-card{width:min(480px,100%);padding:32px}.login-card h1,.panel h2{font-family:'Playfair Display',Georgia,serif}.login-card h1{font-size:3rem;line-height:.95;margin:8px 0 10px}.muted{color:var(--muted);line-height:1.7}.field{margin:14px 0}.field label{display:block;font-size:.72rem;font-weight:800;letter-spacing:.06em;margin-bottom:7px;color:#cfc5d7}.field input{width:100%;background:#0c0811;color:#fff;border:1px solid #3b294d;border-radius:12px;padding:12px;outline:0}.field input:focus{border-color:#9c6df0;box-shadow:0 0 0 3px #9c6df01a}.full{width:100%}.error{color:#ffb5c2;font-size:.82rem;min-height:1.2em;margin-top:10px}.app{padding-bottom:60px}.head{padding:44px 0 25px}.head h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,7vw,5rem);line-height:.92;margin:8px 0 13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 24px}.stat{background:#0d0912;border:1px solid #33233f;border-radius:17px;padding:17px}.stat strong{font-size:1.75rem;display:block}.stat span{font-size:.72rem;color:var(--muted)}.section-title{display:flex;justify-content:space-between;align-items:end;margin:30px 0 12px;gap:10px}.section-title h2{margin:0;font-size:1.45rem}.list{display:grid;gap:12px}.letter-card{background:linear-gradient(145deg,#171024f0,#0d0912f0);border:1px solid var(--line);border-radius:20px;padding:19px}.meta{font-size:.67rem;text-transform:uppercase;letter-spacing:.16em;color:var(--purple2);font-weight:800}.letter-card h3{margin:8px 0 5px}.letter-text{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;line-height:1.7;white-space:pre-wrap;color:#eee7f1;margin:14px 0}.submeta{color:var(--muted);font-size:.82rem}.actions{display:flex;gap:8px;flex-wrap:wrap}.empty{padding:20px;border:1px dashed #4b3659;border-radius:16px;color:var(--muted)}.report-card{background:#160d14;border:1px solid #50303a;border-radius:18px;padding:17px}.report-reason{color:var(--gold);font-weight:800;font-size:.82rem}.pill{display:inline-block;border:1px solid #433050;border-radius:999px;padding:5px 9px;font-size:.68rem;margin-right:5px;color:#d9cae5}.note{font-size:.78rem;color:#a99dad;line-height:1.6}.hide{display:none!important}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,18px);opacity:0;pointer-events:none;background:#241639;border:1px solid #7954a9;padding:11px 15px;border-radius:999px;transition:.2s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:800px){.stats{grid-template-columns:1fr}.top{align-items:flex-start}.top .btn{padding:9px 10px}}
+</style>
+</head>
+<body>
+<div id="loginView" class="login wrap">
+  <div class="login-card">
+    <div class="meta">ÁREA PRIVADA</div>
+    <h1>DEAR, BTS.<br>Moderação.</h1>
+    <p class="muted">Entre com a conta de administradora para revisar cartas e denúncias.</p>
+    <form id="loginForm">
+      <div class="field"><label>E-MAIL</label><input id="email" type="email" autocomplete="username" required></div>
+      <div class="field"><label>SENHA</label><input id="password" type="password" autocomplete="current-password" required></div>
+      <button class="btn primary full" id="loginBtn" type="submit">ENTRAR</button>
+      <div id="loginError" class="error"></div>
+    </form>
+  </div>
+</div>
+
+<div id="appView" class="app wrap hide">
+  <header class="top">
+    <div class="brand">DEAR, BTS.<small>PAINEL DE MODERAÇÃO</small></div>
+    <button class="btn" id="logoutBtn">SAIR</button>
+  </header>
+  <section class="head">
+    <div class="meta">ARQUIVO</div>
+    <h1>Cuidar das palavras<br>também é parte do projeto.</h1>
+    <p class="muted">Aqui você revisa o que chegou antes que uma carta seja tornada pública. A decisão fica registrada pelo status da carta.</p>
+    <div class="stats">
+      <div class="stat"><strong id="pendingCount">0</strong><span>PENDENTES</span></div>
+      <div class="stat"><strong id="publishedCount">0</strong><span>PUBLICADAS</span></div>
+      <div class="stat"><strong id="reportCount">0</strong><span>DENÚNCIAS PENDENTES</span></div>
+    </div>
+    <button class="btn" id="refreshBtn">ATUALIZAR ↻</button>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>Cartas aguardando moderação</h2><span class="pill">pending</span></div>
+    <div id="pendingList" class="list"></div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>Denúncias</h2><span class="pill">reports</span></div>
+    <div id="reportsList" class="list"></div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>Últimas cartas publicadas</h2><span class="pill">published</span></div>
+    <div id="publishedList" class="list"></div>
+  </section>
+</div>
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = 'https://sppxssycikcuexlsgxgs.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ErdE8hQPg6fETr_g8MoJZg_9ZpbQxeD';
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const letterId = id => String(id).padStart(6,'0');
+
+function toast(msg){const x=$('toast');x.textContent=msg;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2400)}
+function showLogin(){ $('loginView').classList.remove('hide'); $('appView').classList.add('hide'); }
+function showApp(){ $('loginView').classList.add('hide'); $('appView').classList.remove('hide'); loadDashboard(); }
+
+async function isAdmin(){
+  const {data,error}=await sb.rpc('is_admin');
+  if(error) throw error;
+  return data === true;
+}
+
+$('loginForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  $('loginError').textContent='';
+  $('loginBtn').disabled=true; $('loginBtn').textContent='ENTRANDO…';
+  try{
+    const {data,error}=await sb.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});
+    if(error) throw error;
+    const ok=await isAdmin();
+    if(!ok){await sb.auth.signOut(); throw new Error('Esta conta não possui permissão de administradora.');}
+    showApp();
+  }catch(err){$('loginError').textContent=err?.message||'Não foi possível entrar.';}
+  finally{$('loginBtn').disabled=false;$('loginBtn').textContent='ENTRAR';}
+});
+
+$('logoutBtn').addEventListener('click',async()=>{await sb.auth.signOut();showLogin();});
+$('refreshBtn').addEventListener('click',loadDashboard);
+
+async function loadDashboard(){
+  try{
+    const admin=await isAdmin();
+    if(!admin){await sb.auth.signOut();showLogin();return;}
+    const [lettersRes,reportsRes]=await Promise.all([
+      sb.from('letters').select('id,target,country,language,name,original_letter,translation,status,consent_to_share_with_bts,created_at').order('created_at',{ascending:false}).limit(300),
+      sb.from('reports').select('id,letter_id,reason,details,status,created_at').eq('status','pending').order('created_at',{ascending:false}).limit(100)
+    ]);
+    if(lettersRes.error) throw lettersRes.error;
+    if(reportsRes.error) throw reportsRes.error;
+    const letters=lettersRes.data||[];
+    const reports=reportsRes.data||[];
+    const pending=letters.filter(x=>x.status==='pending');
+    const published=letters.filter(x=>x.status==='published');
+    $('pendingCount').textContent=pending.length;
+    $('publishedCount').textContent=published.length;
+    $('reportCount').textContent=reports.length;
+    renderLetters('pendingList',pending,true);
+    renderLetters('publishedList',published,false);
+    renderReports(reports,letters);
+  }catch(err){toast('Erro ao carregar o painel.');console.error(err)}
+}
+
+function renderLetters(id,items,isPending){
+  const box=$(id);
+  if(!items.length){box.innerHTML='<div class="empty">Nenhuma carta nesta categoria.</div>';return;}
+  box.innerHTML=items.map(l=>{
+    const date=new Date(l.created_at).toLocaleString('pt-BR');
+    const consent=l.consent_to_share_with_bts?'sim':'não';
+    const buttons=isPending?`<button class="btn green" onclick="changeStatus(${l.id},'published')">PUBLICAR</button><button class="btn gold" onclick="changeStatus(${l.id},'hidden')">OCULTAR</button><button class="btn red" onclick="changeStatus(${l.id},'removed')">REMOVER</button>`:`<button class="btn gold" onclick="changeStatus(${l.id},'hidden')">OCULTAR</button><button class="btn" onclick="changeStatus(${l.id},'removed')">REMOVER</button>`;
+    return `<article class="letter-card"><div class="meta">LETTER #${letterId(l.id)} · ${esc(l.target)}</div><h3>${esc(l.name||'uma ARMY')} · ${esc(l.country)}</h3><div class="submeta">${esc(l.language)} · enviada em ${esc(date)} · autorização para seleção BTS: ${esc(consent)}</div><div class="letter-text">${esc(l.original_letter)}</div><div class="actions">${buttons}</div></article>`;
+  }).join('');
+}
+
+function renderReports(reports,letters){
+  const box=$('reportsList');
+  if(!reports.length){box.innerHTML='<div class="empty">Nenhuma denúncia pendente.</div>';return;}
+  box.innerHTML=reports.map(r=>{
+    const l=letters.find(x=>x.id===r.letter_id);
+    return `<article class="report-card"><div class="report-reason">DENÚNCIA · ${esc(r.reason)}</div><p class="submeta">Carta #${letterId(r.letter_id)}${l?` · ${esc(l.target)} · ${esc(l.country)}`:''}</p>${r.details?`<p class="note">Detalhes: ${esc(r.details)}</p>`:''}<div class="actions"><button class="btn" onclick="resolveReport(${r.id},'dismissed')">ARQUIVAR DENÚNCIA</button>${l?`<button class="btn red" onclick="changeStatus(${l.id},'hidden')">OCULTAR CARTA</button>`:''}</div></article>`;
+  }).join('');
+}
+
+async function changeStatus(id,status){
+  const labels={published:'publicada',hidden:'ocultada',removed:'removida'};
+  if(!confirm(`Tem certeza que deseja marcar a carta #${letterId(id)} como ${labels[status]}?`)) return;
+  try{
+    const {error}=await sb.from('letters').update({status}).eq('id',id);
+    if(error) throw error;
+    toast(`Carta #${letterId(id)}: ${labels[status]}.`);
+    await loadDashboard();
+  }catch(err){toast('Não foi possível atualizar a carta.');console.error(err)}
+}
+
+async function resolveReport(id,status){
+  try{
+    const {error}=await sb.from('reports').update({status}).eq('id',id);
+    if(error) throw error;
+    toast('Denúncia arquivada.');
+    await loadDashboard();
+  }catch(err){toast('Não foi possível atualizar a denúncia.');console.error(err)}
+}
+
+window.changeStatus=changeStatus;window.resolveReport=resolveReport;
+
+(async()=>{
+  try{
+    const {data:{session}}=await sb.auth.getSession();
+    if(!session){showLogin();return;}
+    const ok=await isAdmin();
+    if(ok) showApp(); else {await sb.auth.signOut();showLogin();}
+  }catch(err){console.error(err);showLogin();}
+})();
+</script>
+</body>
+</html>
