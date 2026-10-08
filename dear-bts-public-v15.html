@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEAR, BTS. — um arquivo de ARMY para BTS</title>
+<meta name="version" content="V15">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+:root{
+  --bg:#06050a;--bg2:#0e0a16;--panel:#120d1b;--panel2:#191125;--purple:#a970ff;--purple2:#d6bbff;--gold:#f0cf7d;
+  --white:#fffaff;--muted:#b6aec0;--line:#3a2850;--soft:#dcd4e6;--shadow:#000b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050409;color:var(--white);font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+button,input,textarea,select{font:inherit}button,a{cursor:pointer}button{color:inherit}
+a{color:inherit;text-decoration:none}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(circle at 50% 0%,#35155c55 0,transparent 28%),radial-gradient(circle at 12% 18%,#6d34ac1f,transparent 18%),radial-gradient(circle at 85% 60%,#47216b18,transparent 22%)}
+.starfield,.starfield:before,.starfield:after{position:fixed;inset:-15%;content:"";pointer-events:none;z-index:0;background-repeat:repeat;background-image:radial-gradient(circle,#b78cff 0 1.35px,transparent 2.4px),radial-gradient(circle,#8e55e8 0 1px,transparent 2px),radial-gradient(circle,#e9dfff 0 .7px,transparent 1.7px);background-size:89px 112px,157px 149px,223px 207px;background-position:19px 27px,73px 51px,41px 97px;opacity:.30;animation:drift 50s linear infinite}
+.starfield:before{opacity:.17;transform:scale(1.25);animation-duration:76s}.starfield:after{opacity:.14;transform:scale(.78);animation-duration:34s}
+@keyframes drift{to{transform:translate3d(-50px,35px,0)}}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:17px 5%;background:linear-gradient(#05040bf2,#05040b88 45%,transparent);backdrop-filter:blur(10px)}
+.logo{font-weight:800;letter-spacing:.18em;font-size:.84rem}.nav{display:flex;gap:4px}.nav button{border:0;background:transparent;color:#c7bed1;padding:9px 11px;font-size:.76rem;font-weight:700}.nav button:hover{color:#fff}
+.page{display:none;min-height:100vh;position:relative;z-index:1;padding:104px 5% 80px}.page.active{display:block}.section{max-width:1180px;margin:0 auto}
+/* HOME */
+.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:18px}.hero-inner{max-width:1120px;width:100%;position:relative}.eyebrow{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--purple2);font-weight:800}.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:700;letter-spacing:-.04em;font-size:clamp(4rem,10.5vw,8.4rem);line-height:1.02;margin:20px 0 24px;padding:0 .08em;white-space:nowrap;background:linear-gradient(140deg,#fff 8%,#f0e9ff 40%,#b075ff 83%);-webkit-background-clip:text;color:transparent;text-shadow:0 0 48px #8e55e840}.hero p{max-width:720px;margin:auto;color:#d2cad9;line-height:1.8;font-size:1.02rem}.actions{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;margin-top:31px}.btn{border:1px solid #71558f;background:#1b1126;border-radius:14px;padding:13px 19px;font-size:.86rem;font-weight:800;transition:.2s;display:inline-flex;align-items:center;gap:8px}.btn:hover{transform:translateY(-2px);border-color:#be9cff;background:#28163b}.btn.primary{background:linear-gradient(135deg,#a064ff,#6c36ae);border-color:#c9a9ff}.btn.gold{border-color:#8b7444;background:#211a0e}.btn.gold:hover{border-color:#eed28a;background:#2d2413}
+.cosmos{height:380px;max-width:1000px;margin:18px auto 0;position:relative;overflow:visible}.whale-wrap{position:absolute;left:50%;top:24px;transform:translateX(-50%);width:min(720px,92vw);height:320px;filter:drop-shadow(0 0 36px #8e56e566)}
+.whale-symbol{height:300px}.whale-svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(690px,92vw);height:300px;overflow:visible}.whale-symbol:after{content:"";position:absolute;inset:16% 12%;background:radial-gradient(ellipse at center,#8d4ee520,transparent 58%);filter:blur(8px);z-index:-1}.whale-symbol .bts-label{bottom:0}.whale-symbol .whale-credit{bottom:24px}.whale-real img{width:100%;height:100%;display:block;object-fit:cover;object-position:center center;transform:scale(1.02);filter:saturate(1.08) contrast(1.05) brightness(.92)}
+.whale-real:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 44%,#10091a44 82%,#06040a9d 100%),linear-gradient(0deg,#06040a88,transparent 40%,#0c061533)}
+.glow{position:absolute;width:10px;height:10px;border-radius:50%;background:#c59bff;box-shadow:0 0 20px 7px #a970ff,0 0 42px 12px #7f42d85c;animation:pulse 2.5s ease-in-out infinite alternate}
+@keyframes pulse{to{transform:scale(.56);opacity:.52}}
+.g1{left:13%;top:92px}.g2{left:31%;top:24px}.g3{right:31%;top:20px}.g4{right:13%;top:94px}.g5{right:23%;bottom:24px}.g6{left:23%;bottom:18px}.g7{left:7%;top:166px}
+.bts-label{position:absolute;left:50%;bottom:4px;transform:translateX(-50%);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:#e1d6ed;white-space:nowrap}.bts-label span{color:var(--purple2)}
+.whale-credit{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font-size:.62rem;color:#cfc3dc;opacity:.75;white-space:nowrap}.whale-credit a{text-decoration:underline;color:#ddc9ff}
+.home-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:12px}.glass{background:linear-gradient(145deg,#120d1be8,#0b0810e8);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 30px 90px #0008}.glass h3{font-family:'Playfair Display',Georgia,serif;font-size:2.3rem;margin:0 0 8px}.glass p{color:var(--muted);line-height:1.7;margin:0}.mini-stat{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #2e213d;padding-top:15px;margin-top:16px}.mini-stat strong{font-size:1.6rem}.label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--purple2);font-weight:800}
+/* COMMON */
+.section-head{max-width:850px;margin-bottom:30px}.section-head h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,7vw,5.3rem);line-height:.92;margin:9px 0 15px}.section-head p{color:var(--muted);line-height:1.8}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.filters select,.filters input{background:#0d0912;color:#fff;border:1px solid #3b294d;border-radius:12px;padding:10px 12px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px}.card{background:linear-gradient(145deg,#171024f0,#0d0912f0);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 22px 75px #0007}.card:hover{border-color:#6d4b91}.letter{cursor:pointer}.letter .excerpt{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;line-height:1.45;color:#eee6f4}.tag{font-size:.65rem;letter-spacing:.17em;text-transform:uppercase;color:var(--purple2);font-weight:800}.muted{color:var(--muted)}
+.form{max-width:850px;margin:10px auto}.field{margin:14px 0}.field label{display:block;color:#c6bdcf;font-size:.74rem;font-weight:800;margin-bottom:7px;letter-spacing:.05em}.field input,.field select,.field textarea{width:100%;background:#0c0811;color:#fff;border:1px solid #3b294d;border-radius:13px;padding:13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#9c6df0;box-shadow:0 0 0 3px #9c6df01a}.field textarea{min-height:330px;resize:vertical;font-family:'Playfair Display',Georgia,serif;font-size:1.17rem;line-height:1.75}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result{display:none;margin-top:20px;background:linear-gradient(145deg,#1b102a,#110b17);border:1px solid #6d4a9d;border-radius:18px;padding:20px}.result.show{display:block}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:#000b;z-index:100;padding:22px}.modal.show{display:flex}.modal-box{max-width:760px;width:100%;max-height:88vh;overflow:auto;background:#0f0b15;border:1px solid #5c4079;border-radius:24px;padding:28px}.close{float:right;background:none;border:0;font-size:1.4rem;color:#aaa}
+/* HISTORY */
+.timeline{position:relative;margin-top:25px}.timeline:before{content:"";position:absolute;left:23px;top:0;bottom:0;width:1px;background:linear-gradient(#8c5bd0,#3c2850,#8c5bd0)}
+.era{position:relative;margin:0 0 30px 58px;border:1px solid var(--line);border-radius:25px;overflow:hidden;background:#0c0911;box-shadow:0 25px 80px #0008}.era:before{content:"";position:absolute;left:-43px;top:27px;width:12px;height:12px;border-radius:50%;background:var(--purple2);box-shadow:0 0 20px 6px #9d62ff}.era.special:before{background:var(--gold);box-shadow:0 0 18px 5px #e0b847}
+.era-grid{display:grid;grid-template-columns:minmax(300px,.82fr) 1.18fr}.era-image{position:relative;min-height:340px;overflow:hidden;background:#16101e}.era-image img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block;filter:saturate(.88) contrast(1.04)}.era-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 20%,#0c091100 50%,#0c0911 100%),linear-gradient(0deg,#0c0911 0,transparent 30%)}.era-image .image-credit{position:absolute;bottom:11px;left:13px;z-index:2;font-size:.65rem;color:#eee9;letter-spacing:.03em;background:#0008;padding:5px 7px;border-radius:7px}.era-image .image-credit a{text-decoration:underline}.era-image.image-missing:before{content:"imagem não carregou — abrir fonte oficial";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#d9cdea;font-size:.85rem;letter-spacing:.03em;background:radial-gradient(circle at 50% 35%,#6b3ab555,transparent 48%),#100a18;z-index:1}
+.era-copy{padding:28px 30px}.year{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800}.era-copy h3{font-family:'Playfair Display',Georgia,serif;font-size:2.65rem;line-height:.98;margin:8px 0 9px}.era-copy .lead{font-size:1.07rem;line-height:1.75;color:#eee7f0;margin:0 0 13px}.era-copy .context{color:#b7aebb;line-height:1.76;margin:0 0 17px}.release-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}.release{border:1px solid #463257;background:#140e1d;padding:8px 10px;border-radius:11px;color:#e6dcef;font-size:.76rem}.release small{display:block;color:#94899f;margin-top:2px}.songs{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.song{border:1px solid #48335c;background:#100b16;border-radius:999px;padding:7px 10px;font-size:.72rem;color:#d9c8ea}.scene{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}.scene span{border:1px solid #382746;border-radius:11px;padding:10px;color:#bfaecf;background:linear-gradient(135deg,#15101c,#0c0911);font-size:.75rem}.army-note{margin-top:17px;padding:15px 16px;border-left:2px solid var(--gold);background:#16111b;border-radius:0 13px 13px 0;color:#d9d0dd;font-size:.86rem;line-height:1.65}.army-note strong{color:var(--gold)}
+.era-school .era-image{background:linear-gradient(135deg,#1b1723,#3a2a45)}.era-dark .era-image{background:linear-gradient(135deg,#0b0b0f,#361a28)}.era-hyyh .era-image{background:linear-gradient(135deg,#5d243f,#ad6b80)}.era-wings .era-image{background:linear-gradient(135deg,#161126,#775082)}.era-love .era-image{background:linear-gradient(135deg,#5b1737,#e09aa9)}.era-mots .era-image{background:linear-gradient(135deg,#192033,#82739f)}.era-be .era-image{background:linear-gradient(135deg,#2d2340,#6f676f)}.era-butter .era-image{background:linear-gradient(135deg,#352607,#e1b83f)}.era-proof .era-image{background:linear-gradient(135deg,#07101a,#39608a)}.era-live .era-image{background:linear-gradient(135deg,#171126,#654aa0)}.era-now .era-image{background:linear-gradient(135deg,#17141a,#51505a)}.era-eternal .era-image{background:radial-gradient(circle,#7b4bd1,#2b1252 48%,#07050a)}
+.era-eternal .era-copy{background:radial-gradient(circle at 50% 0,#5d2f9c20,transparent 48%)}
+/* ending */
+.ending{max-width:930px;margin:80px auto 0;text-align:center}.ending-box{position:relative;border:1px solid #7b54a6;border-radius:30px;padding:65px 48px;background:linear-gradient(145deg,#1a1029f2,#0b0810f5);box-shadow:0 0 100px #793dd52b,0 30px 110px #0009}.ending-box:before{content:"";position:absolute;inset:10px;border:1px solid #d6b6ff1c;border-radius:22px;pointer-events:none}.ending .mini-eyebrow{color:var(--gold);font-size:.7rem;letter-spacing:.27em;font-weight:800;text-transform:uppercase}.ending h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.1rem,7vw,5.8rem);line-height:.92;margin:13px 0 24px}.ending p{max-width:730px;margin:13px auto;color:#d0c6d8;font-size:1rem;line-height:1.88}.ending .final{font-size:1.18rem;color:#fff}.final-cta{margin-top:28px}
+.footer{text-align:center;color:#7f7488;font-size:.71rem;padding:36px}.sources{margin-top:18px}.sources a{text-decoration:underline;color:#aa96bd}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,18px);opacity:0;pointer-events:none;z-index:120;background:#241639;border:1px solid #7954a9;padding:12px 17px;border-radius:999px;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){header{padding:14px 4%}.nav button{font-size:.66rem;padding:7px}.nav button:nth-child(3){display:none}.page{padding-left:5%;padding-right:5%}.home-grid{grid-template-columns:1fr}.cosmos{height:320px}.whale-symbol{height:260px}.whale-svg{width:92vw;height:235px}.era{margin-left:40px}.timeline:before{left:16px}.era:before{left:-32px}.era-grid{grid-template-columns:1fr}.era-image,.era-image img{min-height:260px}.scene{grid-template-columns:1fr}.row{grid-template-columns:1fr}.ending-box{padding:48px 24px}.hero h1{font-size:clamp(3.4rem,16vw,5rem);letter-spacing:-.035em;line-height:1.02;white-space:nowrap}}
+</style>
+</head>
+<body>
+<div class="starfield"></div>
+<header>
+  <div class="logo">DEAR, BTS.</div>
+  <nav class="nav">
+    <button onclick="go('home')">HOME</button>
+    <button onclick="go('write')">ESCREVER</button>
+    <button onclick="go('read')">LER</button>
+    <button onclick="go('history')">HISTÓRIA</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="page active">
+  <div class="section hero">
+    <div class="hero-inner">
+      <div class="eyebrow">um arquivo feito por ARMY</div>
+      <h1>DEAR, BTS.</h1>
+      <p>Um lugar para deixar as palavras que você gostaria que o BTS pudesse ler — e para descobrir que, em algum lugar do mundo, outra pessoa também escreveu uma parte da própria história para eles.</p>
+      <div class="actions">
+        <button class="btn primary" onclick="go('write')">✍️ ESCREVER UMA CARTA</button>
+        <button class="btn" onclick="go('read')">💌 LER CARTAS</button>
+        <button class="btn gold" onclick="go('history')">🎞️ CONHECER A HISTÓRIA</button>
+      </div>
+      <div class="cosmos" aria-label="Baleia roxa inspirada no universo de Whalien 52 e We are Bulletproof : the Eternal, cercada por exatamente sete luzes roxas que representam BTS">
+        <div class="whale-wrap whale-symbol">
+          <svg class="whale-svg" viewBox="0 0 860 360" role="img" aria-labelledby="whaleTitle whaleDesc">
+            <title id="whaleTitle">Baleia roxa no universo de DEAR, BTS.</title>
+            <desc id="whaleDesc">Uma baleia roxa estilizada, original, inspirada no imaginário cósmico associado ao BTS e à imagem da baleia em We are Bulletproof : the Eternal.</desc>
+            <defs>
+              <linearGradient id="whaleBody" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#24103f"/>
+                <stop offset="0.34" stop-color="#5e2a95"/>
+                <stop offset="0.68" stop-color="#9a5ee8"/>
+                <stop offset="1" stop-color="#3d176c"/>
+              </linearGradient>
+              <linearGradient id="whaleBelly" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#d9bfff" stop-opacity=".28"/>
+                <stop offset="1" stop-color="#8b4ddb" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="whaleAura" cx="50%" cy="48%" r="50%">
+                <stop offset="0" stop-color="#b983ff" stop-opacity=".28"/>
+                <stop offset="1" stop-color="#6c34b8" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="whaleGlow" x="-30%" y="-40%" width="160%" height="180%">
+                <feGaussianBlur stdDeviation="12"/>
+              </filter>
+              <filter id="whaleShadow" x="-25%" y="-35%" width="150%" height="180%">
+                <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#7e44d8" flood-opacity=".5"/>
+              </filter>
+            </defs>
+
+            <ellipse cx="440" cy="194" rx="315" ry="108" fill="url(#whaleAura)" filter="url(#whaleGlow)"/>
+
+            <!-- cauda -->
+            <path d="M174 191 C128 172 91 143 59 113 C52 107 46 113 51 123 C65 153 87 178 118 197 C89 191 61 194 34 209 C26 214 29 224 40 225 C84 229 126 219 169 206 Z" fill="#3b176c" stroke="#9f66e9" stroke-opacity=".24" stroke-width="3"/>
+
+            <!-- corpo -->
+            <path d="M158 191 C180 130 255 94 355 101 C446 107 515 96 600 119 C671 138 714 164 758 174 C781 179 799 172 817 154 C827 144 839 148 833 163 C824 188 805 210 774 220 C734 233 699 219 663 200 C610 171 559 162 502 176 C438 192 371 226 286 233 C232 238 185 224 158 205 Z" fill="url(#whaleBody)" filter="url(#whaleShadow)"/>
+
+            <!-- barriga / volume -->
+            <path d="M176 197 C238 216 321 215 397 193 C463 174 511 160 571 171 C521 191 459 214 389 232 C306 253 228 247 176 218 Z" fill="url(#whaleBelly)"/>
+
+            <!-- barbatana -->
+            <path d="M482 177 C514 190 548 214 567 236 C540 237 505 230 478 218 C470 204 474 188 482 177 Z" fill="#43197b" stroke="#b07af1" stroke-opacity=".2" stroke-width="3"/>
+
+            <!-- dorso e cauda sutil -->
+            <path d="M286 110 C268 86 264 62 273 39 C276 30 286 31 290 40 C300 62 312 82 331 99 Z" fill="#552390"/>
+            <path d="M603 151 C640 165 673 185 703 199" fill="none" stroke="#d8bdff" stroke-opacity=".32" stroke-width="4" stroke-linecap="round"/>
+            <path d="M210 166 C298 132 402 133 488 151 C533 160 570 173 613 190" fill="none" stroke="#eadcff" stroke-opacity=".28" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M247 198 C326 179 384 181 447 194" fill="none" stroke="#c99dff" stroke-opacity=".2" stroke-width="2.5" stroke-linecap="round"/>
+
+            <!-- olho sem virar uma oitava luz -->
+            <circle cx="680" cy="151" r="2.8" fill="#f7efff" opacity=".9"/>
+
+            <!-- pequeno sopro -->
+            <path d="M671 135 C662 122 658 111 664 99" fill="none" stroke="#d7b9ff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+            <path d="M686 135 C686 120 691 109 701 99" fill="none" stroke="#c79aff" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+          </svg>
+          <span class="glow g1"></span><span class="glow g2"></span><span class="glow g3"></span><span class="glow g4"></span><span class="glow g5"></span><span class="glow g6"></span><span class="glow g7"></span>
+          <div class="bts-label">7 luzes roxas · <span>BTS</span></div>
+          <div class="whale-credit">baleia inspirada em <a href="https://weverse.io/bts/media/2-105470637" target="_blank" rel="noopener">We are Bulletproof : the Eternal</a> · símbolo associado também a <a href="https://bts.ibighit.com/eng/discography/detail/map_of_the_soul-7.html" target="_blank" rel="noopener">Whalien 52</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section home-grid">
+    <div class="glass"><div class="label">O coração do projeto</div><h3>Palavras também deixam luz.</h3><p>Cada carta que entra no arquivo é mais um ponto de luz nesse universo. Não é uma competição, não é uma rede social: é memória. Uma coleção de pessoas que escolheram deixar algo escrito.</p><div class="mini-stat"><div><strong id="letterCount">0</strong><div class="muted">cartas publicadas</div></div><div data-db-status>ARQUIVO…</div></div></div>
+    <div class="glass"><div class="label">DEAR, BTS.</div><h3>De sete para milhões.</h3><p>As sete luzes principais representam BTS. O céu inteiro representa ARMY. Entre os dois existe aquilo que o projeto quer guardar: a conexão.</p><div class="actions" style="justify-content:flex-start;margin-top:18px"><button class="btn" onclick="go('write')">DEIXAR A MINHA ✉</button></div></div>
+  </div>
+  <div class="footer">Projeto independente de fãs. Não afiliado oficialmente a BTS ou BIGHIT MUSIC.</div>
+</section>
+
+<section id="write" class="page">
+  <div class="section-head section"><div class="label">ESCREVER</div><h2>Uma carta para ficar.</h2><p>Escolha para quem você quer escrever, escreva no seu idioma e deixe suas palavras encontrarem um lugar no arquivo.</p></div>
+  <div class="form">
+    <div class="row"><div class="field"><label>PARA QUEM?</label><select id="target"><option>BTS</option><option>RM</option><option>Jin</option><option>SUGA</option><option>j-hope</option><option>Jimin</option><option>V</option><option>Jung Kook</option></select></div><div class="field"><label>SEU PAÍS</label><input id="country" placeholder="Brasil"></div></div>
+    <div class="row"><div class="field"><label>SEU NOME / APELIDO <span class="muted">(opcional)</span></label><input id="name" placeholder="uma ARMY"></div><div class="field"><label>IDIOMA ORIGINAL</label><select id="lang"><option>Português</option><option>English</option><option>한국어</option><option>Español</option><option>Français</option><option>Outro</option></select></div></div>
+    <div class="field" style="margin-top:18px"><label style="display:flex;gap:9px;align-items:flex-start;font-weight:600;letter-spacing:0"><input id="consentToShare" type="checkbox" style="width:auto;margin-top:3px"> Concordo que, se esta carta for aprovada, ela possa ser incluída futuramente em uma seleção destinada ao BTS ou à equipe.</label></div>
+    <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><label>Não preencha este campo<input id="website" tabindex="-1" autocomplete="off"></label></div>
+    <div class="field"><label>SUA CARTA</label><textarea id="letter" placeholder="Escreva aqui aquilo que você gostaria que eles pudessem ler um dia..."></textarea></div>
+    <button class="btn primary" onclick="saveLetter()">GUARDAR CARTA ✨</button>
+    <div id="result" class="result"></div>
+  </div>
+  <div class="footer">Suas cartas entram no arquivo online após o envio seguro e passam por moderação antes de serem publicadas. <span data-db-status>ARQUIVO…</span></div>
+</section>
+
+<section id="read" class="page">
+  <div class="section-head section"><div class="label">ARQUIVO</div><h2>Cartas para BTS.</h2><p>Um arquivo público em crescimento. As cartas aprovadas recebem um ID permanente e podem ser abertas por um link próprio.</p></div>
+  <div class="section filters"><select id="filterTarget" onchange="renderLetters()"><option value="">Todos</option><option>BTS</option><option>RM</option><option>Jin</option><option>SUGA</option><option>j-hope</option><option>Jimin</option><option>V</option><option>Jung Kook</option></select><select id="filterCountry" onchange="renderLetters()"><option value="">Todos os países</option><option>Brasil</option><option>Argentina</option><option>Coreia do Sul</option></select></div>
+  <div class="section cards" id="letters"></div>
+  <div class="section footer">✦ O arquivo cresce uma carta por vez.</div>
+</section>
+
+<section id="history" class="page">
+  <div class="section-head section"><div class="label">HISTÓRIA</div><h2>Sete pessoas. Muitos capítulos.</h2><p>Esta não é uma enciclopédia. É uma viagem pelas fases que foram construindo a história do BTS — em ordem cronológica, com álbuns, músicas, imagens e as sensações que muitas pessoas da ARMY associam a cada capítulo.</p></div>
+  <div class="section timeline" id="eras"></div>
+  <div class="section ending">
+    <div class="ending-box">
+      <div class="mini-eyebrow">antes de ir</div>
+      <h2>A história deles continua.</h2>
+      <p>Existem músicas que ainda não ouvimos, palcos que ainda não vimos, lugares onde ainda vamos encontrá-los e memórias que ainda nem existem.</p>
+      <p>Talvez seja impossível saber exatamente o que vem depois. E tudo bem.</p>
+      <p>Porque não precisamos conhecer o próximo capítulo para querer continuar lendo. Eles podem mudar, crescer, descansar, recomeçar e descobrir novas versões de si mesmos.</p>
+      <p class="final">A história do BTS ainda não acabou.<br>E a nossa também não.</p>
+      <p>Então, antes de seguir... se existe alguma coisa que você gostaria de dizer a eles, deixe aqui. Porque algumas palavras merecem permanecer.</p>
+      <button class="btn primary final-cta" onclick="go('write')">✉️ DEIXAR UMA CARTA</button>
+    </div>
+  </div>
+  <div class="section footer">Fontes e referências visuais: <a href="https://bts.ibighit.com/eng/discography/" target="_blank" rel="noopener">discografia oficial BIGHIT MUSIC</a> e páginas oficiais de cada lançamento. As imagens externas do protótipo são referenciais e deverão ser substituídas por assets com licença adequada antes de uma publicação pública.</div>
+</section>
+</main>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+// DEAR, BTS. — conexão direta com a API REST do Supabase.
+// Isso evita depender do carregamento de uma biblioteca externa antes de os botões do site funcionarem.
+const SUPABASE_URL = "https://sppxssycikcuexlsgxgs.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_ErdE8hQPg6fETr_g8MoJZg_9ZpbQxeD";
+const SUBMIT_LETTER_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/submit-letter`;
+
+async function sbRequest(path, options = {}) {
+  const headers = {
+    apikey: SUPABASE_PUBLISHABLE_KEY,
+    Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+    Accept: 'application/json',
+    ...(options.headers || {})
+  };
+  const res = await fetch(`${SUPABASE_URL}${path}`, { ...options, headers });
+  const raw = await res.text();
+  let data = null;
+  try { data = raw ? JSON.parse(raw) : null; } catch { data = raw; }
+  if (!res.ok) {
+    const message = typeof data === 'object' && data?.message ? data.message : (typeof data === 'string' ? data : `HTTP ${res.status}`);
+    throw new Error(message);
+  }
+  return data;
+}
+
+const eras=[
+{year:'2013 · 12 JUN',title:'2 COOL 4 SKOOL',cls:'era-school',img:'https://images2.alphacoders.com/913/913972.jpg',credit:'imagem referencial',src:'https://wall.alphacoders.com/big.php?i=707292',releases:['2 COOL 4 SKOOL'],feeling:'Antes de existir a grande história, existia uma pergunta: o que você quer fazer da sua vida?',context:'O começo é direto. Sete jovens entram na cena com hip-hop, atitude e uma vontade enorme de falar sobre sonhos, escola, pressão e o caminho que a sociedade espera que alguém siga.',songs:['No More Dream','We are bulletproof PT.2','Like'],scene:['streetwear','escola / sonhos','hip-hop','juventude'],note:'Voltar para o início é lembrar de um BTS ainda pequeno, muito cru e muito determinado a ocupar um espaço com a própria voz.',link:'https://bts.ibighit.com/eng/discography/detail/2_cool_4_school.html'},
+{year:'2013–2014',title:'A SCHOOL TRILOGY',cls:'era-school',img:'https://images2.alphacoders.com/913/913972.jpg',credit:'visual de referência do início',src:'https://bts.ibighit.com/eng/discography/',releases:['O!RUL8,2? · 11 SET 2013','SKOOL LUV AFFAIR · 12 FEV 2014'],feeling:'O sonho encontra a realidade: notas, expectativa, amor, amizade, comparação e a sensação de estar tentando descobrir quem você é.',context:'O primeiro ciclo consolida a identidade escolar do grupo antes de DARK & WILD mudar o figurino, a postura e a escala da narrativa. É uma fase sobre juventude, mas também sobre cobrança e independência.',songs:['N.O','Boy In Luv','Just One Day','Tomorrow'],scene:['uniformes','cadernos e concreto','rebeldia','primeiros amores'],note:'É uma fase lembrada por ter uma energia muito específica de começo: sete pessoas ainda descobrindo o próprio espaço enquanto construíam uma identidade coletiva.',link:'https://bts.ibighit.com/eng/discography/'},
+{year:'2014 · 20 AGO',title:'DARK & WILD',cls:'era-dark',img:'https://bts-indonesia.weebly.com/uploads/2/2/5/3/22532668/8264136_orig.jpg',credit:'imagem referencial',src:'https://bts-indonesia.weebly.com/140907-dark-wild-4.html',releases:['DARK & WILD'],feeling:'Eles já não estão nos uniformes. A juventude continua, mas o palco ficou mais escuro e a identidade mais afiada.',context:'DARK & WILD é o primeiro álbum completo e marca uma mudança visual e musical importante: o grupo se afasta da estética escolar e entra em um território mais urbano, intenso e confiante.',songs:['Danger','War of Hormone','Let Me Know','Hip Hop Phile'],scene:['couro preto','concreto','grafite','atitude'],note:'A era costuma ser lembrada pela transição: o BTS ainda jovem, mas já muito mais seguro da própria presença.',link:'https://bts.ibighit.com/eng/discography/detail/map_of_the_soul-7.html'},
+{year:'2015–2016',title:'HYYH · O MOMENTO MAIS BONITO DA VIDA',cls:'era-hyyh',img:'https://farm1.staticflickr.com/635/21524022808_c00613de14_o.jpg',credit:'imagem referencial',src:'https://btsdiary.wordpress.com/2015/09/26/picturefb-%E8%8F%AF%E6%A8%A3%E5%B9%B4%E8%8F%AF-pt-1-i-need-u-sketch-photo-150505/',releases:['HYYH pt.1 · 29 ABR 2015','HYYH pt.2 · 30 NOV 2015','Young Forever · 02 MAI 2016'],feeling:'Talvez seja bonito justamente porque não é perfeito. É bonito porque existe enquanto tudo ainda pode dar errado.',context:'HYYH coloca juventude, amizade, perda, medo e esperança no centro. A estrada, as flores, os trilhos e a sensação de que o tempo está passando formam uma fase que muitos fãs associam à liberdade e à saudade ao mesmo tempo.',songs:['I NEED U','RUN','Butterfly','Save ME','Young Forever','Whalien 52'],scene:['flores','trilhos','estrada','céu de fim de tarde'],note:'Em discussões de ARMY, HYYH aparece repetidamente como uma era que muita gente gostaria de reviver — pela música, mas também pela atmosfera e pelo que ela fez cada pessoa sentir.'},
+{year:'2016–2017',title:'WINGS → YOU NEVER WALK ALONE',cls:'era-wings',img:'https://ibighit.com/public/bts/images/bts/discography/wings/photo-06.jpg',credit:'imagem oficial BIGHIT',src:'https://ibighit.com/en/bts/discography/detail/wings',releases:['WINGS · 10 OUT 2016','You Never Walk Alone · 13 FEV 2017'],feeling:'Crescer pode significar desejar alguma coisa e, ao mesmo tempo, ter medo do que acontece quando finalmente alcançamos essa coisa.',context:'WINGS expande a narrativa para tentação, escolha, medo e amadurecimento. Os solos e os short films dão a cada integrante uma linguagem própria dentro de uma história maior, e You Never Walk Alone acrescenta a ideia de seguir acompanhado.',songs:['Blood Sweat & Tears','Begin','Lie','Stigma','First Love','Awake','Spring Day','Not Today'],scene:['asas','arte clássica','espelhos','céu / queda'],note:'Fãs frequentemente citam WINGS pela estética, pelos short films e pela sensação de que cada membro ganhou um espaço próprio dentro de um universo maior.',link:'https://ibighit.com/en/bts/discography/detail/wings'},
+{year:'2017–2018',title:'LOVE YOURSELF',cls:'era-love',img:'https://bts.ibighit.com/images/bts/discography/love_yourself-her/photo02-01.jpg',credit:'imagem oficial BIGHIT',src:'https://bts.ibighit.com/eng/discography/detail/love_yourself-her.html',releases:['Her · 18 SET 2017','Tear · 18 MAI 2018','Answer · 24 AGO 2018'],feeling:'Amar outra pessoa pode ser bonito. Aprender a não se abandonar no processo é outra história.',context:'A trilogia passa pelo encanto, pelas contradições do amor e pela volta para si. Flores, espelhos, cores e diferentes versões de identidade acompanham uma fase em que a mensagem ultrapassa a música.',songs:['DNA','MIC Drop','FAKE LOVE','IDOL','Euphoria','Epiphany','Singularity'],scene:['flores','espelhos','cores pastel','rosa / luz'],note:'A mensagem de LOVE YOURSELF é lembrada por fãs não apenas pelas músicas, mas pelo sentimento de que BTS estava dizendo que cada pessoa também merece aprender a se escolher.',link:'https://bts.ibighit.com/eng/discography/detail/love_yourself-her.html'},
+{year:'2019–2020',title:'MAP OF THE SOUL · PERSONA → 7',cls:'era-mots',img:'https://www.nme.com/wp-content/uploads/2020/02/BTS_VER1.jpg',credit:'imagem referencial',src:'https://www.nme.com/news/music/bts-unveil-concept-photos-new-album-map-of-the-soul-7-2606677',releases:['PERSONA · 12 ABR 2019','MAP OF THE SOUL : 7 · 21 FEV 2020'],feeling:'Quem existe por trás da máscara? E o que acontece quando a sombra também precisa ser aceita?',context:'Persona, sombra, identidade e palco entram no centro. A era olha para trás para os sete anos desde o debut e transforma crescimento e cicatrizes em parte da ideia de “eu completo”.',songs:['Boy With Luv','Dionysus','Black Swan','ON','Filter','My Time','00:00','We are Bulletproof : the Eternal'],scene:['máscaras','espelhos','asas pretas','arte / palco'],note:'Para muitos fãs, este capítulo mistura espetáculo e introspecção: quanto maior o grupo fica, mais pessoal parece a pergunta sobre quem eles são.',link:'https://bts.ibighit.com/eng/discography/detail/map_of_the_soul-7.html'},
+{year:'2020 · 21 AGO → 20 NOV',title:'DYNAMITE → BE',cls:'era-be',img:'https://bts.ibighit.com/images/bts/discography/be/video-cover03.jpg',credit:'imagem oficial · BIGHIT MUSIC',src:'https://bts.ibighit.com/eng/discography/detail/be.html',releases:['Dynamite · 21 AGO 2020','BE · 20 NOV 2020'],feeling:'Quando o mundo muda de repente, continuar também pode ser uma forma de coragem.',context:'Dynamite leva uma energia pop luminosa para 2020. BE muda o tom: fala de medo, ansiedade, rotina e da vontade de seguir em frente enquanto a vida parece ter parado.',songs:['Dynamite','Life Goes On','Blue & Grey','Telepathy','Dis-ease','Fly To My Room'],scene:['quarto','instrumentos','janela','rotina em casa'],note:'ARMY costuma guardar esse período como um capítulo cheio de contrastes: conforto, distância, conquistas, saudade e a tentativa de continuar perto mesmo longe.',link:'https://bts.ibighit.com/eng/discography/detail/be.html'},
+{year:'2021',title:'BUTTER → PERMISSION TO DANCE',cls:'era-butter',img:'https://www.allkpop.com/upload/2022/06/content/231358/web_data/allkpop_1656007717_untitled-1.jpg',credit:'imagem referencial',src:'https://www.allkpop.com/article/2022/06/people-are-having-mixed-feelings-as-netizens-discover-the-bts-festa-dinner-was-recorded-three-weeks-before-its-release',releases:['Butter · 21 MAI 2021','Butter CD / Permission to Dance · 09 JUL 2021'],feeling:'Cor, brilho, dança e um mundo que começava a se mexer de novo.',context:'Depois do tom íntimo de BE, BTS entra em uma fase pop mais leve e expansiva. Butter chega como um single dançante e Permission to Dance reforça a ideia de movimento e encontro.',songs:['Butter','Permission to Dance'],scene:['amarelo / dourado','fitas','microfones','palco'],note:'É uma fase que muitos associam a leveza, performance e a esperança de voltar a celebrar juntos.',link:'https://bts.ibighit.com/eng/discography/detail/butter.html'},
+{year:'2022 · 10 JUN',title:'PROOF',cls:'era-proof',img:'https://phinf.wevpstatic.net/MjAyMjA2MTdfMzAw/MDAxNjU1NDQzNTczOTk4.UnJU5A7O3ktak1JSzIZQoeRTpfHxLTNCossjFdoFqIIg.i4gzh8MZIRk-CnI9fAVQmXMZ8ZPQYpAYsllKvmiNs54g.JPEG/4c5e0ded5b7e46529150941a9407bafb409.jpg?type=w670',credit:'imagem oficial · Weverse / BIGHIT MUSIC',src:'https://weverse.io/bts/media/0-1881',releases:['PROOF'],feeling:'Olhar para trás sem ficar preso ao passado.',context:'PROOF é uma antologia construída em torno da própria história do BTS. A obra reúne faixas de diferentes momentos e novas músicas, funcionando como um grande ponto de memória e retrospectiva.',songs:['Yet To Come','Run BTS','For Youth'],scene:['arquivo','portas','metal','memória'],note:'Dentro de um projeto de cartas, PROOF combina perfeitamente com a ideia de guardar aquilo que foi vivido e reconhecer que a história continua.',link:'https://bts.ibighit.com/eng/discography/detail/proof/index.html'},
+{year:'2023 · 09 JUN',title:'TAKE TWO',cls:'era-live',img:'https://www.euphoriazine.com/wp-content/uploads/2023/06/BTS.jpg',credit:'imagem referencial',src:'https://www.euphoriazine.com/blog/2023/06/music/tracks-bts-take-two/',releases:['Take Two · 09 JUN 2023'],feeling:'Dez anos depois, uma pausa para olhar quem caminhou junto.',context:'Take Two comemora o 10º aniversário do grupo e olha para o caminho percorrido ao lado de ARMY, enquanto imagina o futuro compartilhado.',songs:['Take Two'],scene:['caixas roxas','aniversário','recomeço','ARMY'],note:'É uma pequena carta dentro da própria discografia: BTS olha para trás, reconhece o tempo e fala como quem ainda quer caminhar mais.',link:'https://bts.ibighit.com/eng/discography/detail/take-two/'},
+{year:'2025 · 18 JUL',title:'PERMISSION TO DANCE ON STAGE — LIVE',cls:'era-live',img:'https://phinf.wevpstatic.net/MjAyMjA2MThfMTIg/MDAxNjU1NTA4OTkzNzgy.Ox9dIEB3y_Hqxdt9ioKD1xnqCuiHV-OqjAqPT_emwA4g.2-rvTPSyGdzNggV-erBfPrpIsnuQi6wTOw4efGTld40g.JPEG/e633a9dd8d074518bcf8ef2530e1217f828.jpg',credit:'imagem referencial / Weverse',src:'https://weverse.io/bts/media/2-121995',releases:['PERMISSION TO DANCE ON STAGE — LIVE'],feeling:'Um álbum que guarda o som de uma turnê que virou memória.',context:'O live album registra apresentações da turnê Permission to Dance On Stage realizadas em Seul, Los Angeles e Las Vegas em 2021, transformando aquele período de palco e encontro em memória registrada.',songs:['ON · Live','Black Swan · Live','Life Goes On · Live','Butter · Live','Permission to Dance · Live'],scene:['estádio','luzes','público','palco'],note:'Aqui a história do arquivo encontra outra coisa importante: memória também pode ser o som de milhares de vozes no mesmo lugar.',link:'https://bts.ibighit.com/eng/discography/detail/permission-to-dance/index.html'},
+{year:'2026',title:'ARIRANG · UM NOVO CAPÍTULO',cls:'era-now',img:'https://images.universal-music.de/img/assets/628/628100/991/720/pressebild-arirang-2026.jpg',credit:'imagem de imprensa / Universal Music',src:'https://www.universal-music.de/bts/fotos/pressebild-arirang-2026-53080_628100',releases:['ARIRANG'],feeling:'Depois de olhar para trás, existe uma pergunta simples: e agora?',context:'ARIRANG abre um novo capítulo para o grupo. Em vez de fingir que já sabemos o que virá, a página termina deixando espaço para o futuro — e para todas as histórias que ainda podem ser escritas.',songs:['ARIRANG'],scene:['trajes formais','pedra / metal','novo começo','futuro'],note:'Para um arquivo de cartas, não poderia existir um ponto final mais bonito: a linha do tempo termina justamente onde o espaço em branco começa.',link:'https://bts.ibighit.com/eng/discography/detail/arirang/index.html'},
+{year:'PONTO DE ENCONTRO',title:'WE ARE BULLETPROOF : THE ETERNAL',cls:'era-eternal special',img:'',credit:'obra / MV oficial',src:'https://www.youtube.com/watch?v=7UWBYJjuIL0',releases:['MAP OF THE SOUL : 7 · 2020'],feeling:'Sete luzes já não parecem sozinhas. Ao redor delas, o universo começa a responder.',context:'Este é o coração visual da experiência. O MV de We are Bulletproof : the Eternal revisita a trajetória do BTS e a coloca em uma imagem de continuidade. No nosso site, é aqui que BTS e ARMY deixam de ser dois lugares separados e viram um mesmo céu de luzes.',songs:['We are Bulletproof : the Eternal'],scene:['baleia','sete luzes','céu roxo','milhões de pontos'],note:'Por isso a baleia volta para a Home: ela funciona como a imagem-símbolo do lugar onde este arquivo encontra a relação BTS ↔ ARMY.',link:'https://www.youtube.com/watch?v=7UWBYJjuIL0'}
+];
+
+let letters=[];
+let dbOnline=false;
+
+function go(id){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+  if(id==='read') loadLetters();
+  if(id==='history') renderEras();
+}
+
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function displayId(id){return String(id).padStart(6,'0')}
+function dbLetterToUi(row){
+  return {
+    dbId: row.id,
+    id: displayId(row.id),
+    target: row.target,
+    country: row.country,
+    lang: row.language,
+    name: row.name || 'uma ARMY',
+    text: row.original_letter,
+    translation: row.translation || '',
+    created_at: row.created_at
+  };
+}
+
+function setDatabaseState(online, detail=''){
+  dbOnline=online;
+  const nodes=document.querySelectorAll('[data-db-status]');
+  nodes.forEach(n=>{
+    n.textContent=online?'ARQUIVO ONLINE':'ARQUIVO INDISPONÍVEL';
+    n.style.color=online?'#d6bbff':'#f0cf7d';
+    n.title=detail || '';
+  });
+}
+
+async function checkDatabase(){
+  try{
+    await sbRequest('/rest/v1/letters?select=id&status=eq.published&limit=1');
+    setDatabaseState(true);
+    return true;
+  }catch(error){
+    setDatabaseState(false,error?.message||'Não foi possível acessar o arquivo agora.');
+    return false;
+  }
+}
+
+async function loadLetters(){
+  const box=document.getElementById('letters');
+  box.innerHTML='<div class="card"><p class="muted">Abrindo o arquivo de cartas… ✦</p></div>';
+  try{
+    const params = new URLSearchParams({
+      select:'id,target,country,language,name,original_letter,translation,created_at',
+      status:'eq.published',
+      order:'created_at.desc',
+      limit:'100'
+    });
+    const ft=document.getElementById('filterTarget')?.value||'';
+    const fc=document.getElementById('filterCountry')?.value||'';
+    if(ft) params.set('target',`eq.${ft}`);
+    if(fc) params.set('country',`eq.${fc}`);
+    const data=await sbRequest(`/rest/v1/letters?${params.toString()}`);
+    letters=(data||[]).map(dbLetterToUi);
+    updateCountryFilter(data||[]);
+    renderLetters();
+    setDatabaseState(true);
+  }catch(error){
+    letters=[];
+    box.innerHTML='<div class="card"><p class="muted">O arquivo de cartas está temporariamente indisponível. Tente novamente em alguns instantes.</p></div>';
+    setDatabaseState(false,error?.message||'Erro de conexão');
+    toast('Não foi possível abrir o arquivo agora.');
+  }
+}
+
+function updateCountryFilter(data){
+  const select=document.getElementById('filterCountry');
+  if(!select) return;
+  const current=select.value;
+  const countries=[...new Set((data||[]).map(x=>x.country).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  select.innerHTML='<option value="">Todos os países</option>'+countries.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+  select.value=current;
+}
+
+function renderLetters(){
+  const box=document.getElementById('letters');
+  const count=document.getElementById('letterCount');
+  if(count) count.textContent=letters.length;
+  if(!letters.length){
+    box.innerHTML='<div class="card"><p class="muted">Ainda não há cartas publicadas. Talvez você seja uma das primeiras pessoas a deixar uma luz aqui. ✦</p></div>';
+    return;
+  }
+  box.innerHTML=letters.map(l=>`<article class="card letter" onclick="openLetter('${esc(l.id)}')" aria-label="Abrir carta ${esc(l.id)}"><div class="tag">LETTER #${esc(l.id)}</div><h3>Para ${esc(l.target)}</h3><p class="muted">${esc(l.country)} · ${esc(l.lang)}</p><p class="excerpt">${esc((l.text||'').slice(0,170))}${(l.text||'').length>170?'…':''}</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="btn" onclick="event.stopPropagation();reportFromCard('${esc(l.id)}')">⚑ DENUNCIAR</button></div></article>`).join('');
+}
+
+async function openLetter(id){
+  const ui=letters.find(x=>x.id===id);
+  if(ui){showLetterModal(ui);return;}
+  try{
+    const numeric=Number(id);
+    if(!Number.isInteger(numeric)) return;
+    const rows=await sbRequest(`/rest/v1/letters?select=id,target,country,language,name,original_letter,translation,created_at&id=eq.${numeric}&status=eq.published&limit=1`);
+    if(rows?.[0]) showLetterModal(dbLetterToUi(rows[0]));
+  }catch(error){toast('Não foi possível abrir essa carta agora.');}
+}
+
+function reportFromCard(id){
+  const ui=letters.find(x=>x.id===id);
+  if(ui){ showLetterModal(ui); setTimeout(()=>openReportForm(id),60); return; }
+  openLetter(id).then(()=>setTimeout(()=>openReportForm(id),60));
+}
+
+function showLetterModal(l){
+  const translation=l.translation?`<div style="margin-top:28px;padding-top:22px;border-top:1px solid #352443"><div class="tag">TRADUÇÃO</div><div style="margin-top:12px;color:#d9cfdf;line-height:1.85;white-space:pre-wrap">${esc(l.translation)}</div></div>`:'';
+  document.getElementById('modalContent').innerHTML=`<div class="tag">LETTER #${esc(l.id)}</div><h2 style="font-family:Playfair Display,Georgia,serif;font-size:2.4rem;margin:10px 0">Para ${esc(l.target)}</h2><p class="muted">${esc(l.country)} · ${esc(l.lang)} · ${esc(l.name)}</p><div style="margin-top:20px;color:#eee;line-height:1.85;font-family:Playfair Display,Georgia,serif;font-size:1.17rem;white-space:pre-wrap">${esc(l.text)}</div>${translation}<div style="margin-top:22px"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="copyLink('${esc(l.id)}')">COPIAR LINK DA CARTA</button><button class="btn" onclick="openReportForm('${esc(l.id)}')">⚑ DENUNCIAR CARTA</button></div><div id="reportForm" style="display:none;margin-top:22px;padding-top:20px;border-top:1px solid #352443"><div class="tag">DENUNCIAR ESTA CARTA</div><p class="muted" style="margin:8px 0 14px">Use a denúncia apenas quando houver um problema com o conteúdo. Ela será analisada na moderação.</p><select id="reportReason" style="width:100%;background:#0c0811;color:#fff;border:1px solid #3b294d;border-radius:12px;padding:12px"><option value="spam">Spam ou conteúdo repetitivo</option><option value="harassment">Assédio, ataque ou ofensa</option><option value="threat">Ameaça</option><option value="inappropriate">Conteúdo inadequado</option><option value="other">Outro problema</option></select><textarea id="reportDetails" placeholder="Explique brevemente o motivo (opcional)" style="width:100%;min-height:110px;margin-top:10px;background:#0c0811;color:#fff;border:1px solid #3b294d;border-radius:12px;padding:12px"></textarea><div style="margin-top:10px"><button class="btn gold" onclick="submitReport('${esc(l.id)}')">ENVIAR DENÚNCIA</button><button class="btn" onclick="closeReportForm()">CANCELAR</button></div></div></div>`;
+  document.getElementById('modal').classList.add('show');
+  history.replaceState(null,'',location.pathname+location.search+'#letter-'+encodeURIComponent(l.id));
+}
+
+function closeModal(){document.getElementById('modal').classList.remove('show');closeReportForm()}
+
+function openReportForm(id){
+  const form=document.getElementById('reportForm');
+  if(!form) return;
+  form.style.display='block';
+  form.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function closeReportForm(){
+  const form=document.getElementById('reportForm');
+  if(form) form.style.display='none';
+}
+
+async function submitReport(id){
+  const numeric=Number(id);
+  if(!Number.isInteger(numeric)) return;
+  const reason=document.getElementById('reportReason')?.value || 'other';
+  const details=(document.getElementById('reportDetails')?.value || '').trim();
+  const button=document.querySelector('#reportForm .btn.gold');
+  const detailBox=document.getElementById('reportDetails');
+  if(button){button.disabled=true;button.textContent='ENVIANDO…';}
+  try{
+    const rows=await sbRequest(`/rest/v1/letters?select=id&id=eq.${numeric}&status=eq.published&limit=1`);
+    if(!rows?.[0]){throw new Error('Essa carta não está disponível para denúncia agora.');}
+
+    const result=await sbRequest('/rest/v1/rpc/submit_report', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        p_letter_id:numeric,
+        p_reason:reason,
+        p_details:details||null
+      })
+    });
+
+    if(result===null || result===undefined){
+      throw new Error('O banco não confirmou o recebimento da denúncia.');
+    }
+
+    if(detailBox) detailBox.value='';
+    closeReportForm();
+    toast('Denúncia enviada para moderação. ✦');
+  }catch(error){
+    console.error('submitReport error:',error);
+    const raw=String(error?.message||'');
+    let message='Não foi possível enviar a denúncia agora.';
+    if(raw.includes('letter_not_available')) message='Essa carta não está disponível para denúncia agora.';
+    else if(raw.includes('invalid_reason')) message='O motivo escolhido não é válido.';
+    else if(raw) message='Falha ao enviar: '+raw;
+    toast(message);
+  }finally{
+    if(button){button.disabled=false;button.textContent='ENVIAR DENÚNCIA';}
+  }
+}
+
+async function saveLetter(){
+  const text=document.getElementById('letter').value.trim();
+  const country=document.getElementById('country').value.trim();
+  const target=document.getElementById('target').value;
+  const lang=document.getElementById('lang').value;
+  const name=document.getElementById('name').value.trim()||'uma ARMY';
+  const consent=document.getElementById('consentToShare')?.checked||false;
+  const honeypot=document.getElementById('website')?.value.trim()||'';
+  const button=document.querySelector('#write .btn.primary');
+  const resultBox=document.getElementById('result');
+
+  if(!text){toast('Escreva sua carta antes de guardar.');return}
+  if(!country){toast('Coloque seu país para guardar a carta.');return}
+  if(text.length<20){toast('Sua carta precisa ter pelo menos 20 caracteres.');return}
+  if(text.length>12000){toast('Sua carta ficou grande demais. Tente deixá-la com até 12.000 caracteres.');return}
+  if(honeypot){toast('Não foi possível enviar esta carta.');return}
+
+  if(button){button.disabled=true;button.textContent='GUARDANDO…';}
+  try{
+    const response=await fetch(SUBMIT_LETTER_FUNCTION_URL,{
+      method:'POST',
+      headers:{
+        'apikey':SUPABASE_PUBLISHABLE_KEY,
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({
+        name,
+        country,
+        language:lang,
+        target,
+        original_letter:text,
+        consent_to_share_with_bts:consent,
+        website:honeypot
+      })
+    });
+
+    const raw=await response.text();
+    let data=null;
+    try{data=raw?JSON.parse(raw):null}catch{data=raw}
+
+    if(!response.ok){
+      const code=(data && typeof data==='object' && data.error)?data.error:'';
+      const message=(data && typeof data==='object' && data.message)?data.message:'';
+      if(response.status===401){
+        throw new Error('FUNCTION_AUTH');
+      }
+      if(code==='country_required') throw new Error('country_required');
+      if(code==='letter_too_short') throw new Error('letter_too_short');
+      if(code==='letter_too_long') throw new Error('letter_too_long');
+      if(code==='invalid_target') throw new Error('invalid_target');
+      if(code==='spam_detected') throw new Error('spam_detected');
+      throw new Error(message || code || `HTTP ${response.status}`);
+    }
+
+    const idValue=data && typeof data==='object' ? data.id : data;
+    const numericId=Number(idValue);
+    if(!Number.isInteger(numericId)) throw new Error('MISSING_ID');
+
+    const id=displayId(numericId);
+    resultBox.classList.add('show');
+    resultBox.innerHTML=`<strong>Sua carta foi recebida. ✨</strong><br><span class="muted">LETTER #${esc(id)}</span><br><br><p class="muted" style="line-height:1.7;margin:0 0 15px">Ela foi guardada no arquivo e está aguardando a etapa de moderação antes de aparecer publicamente.</p><button class="btn" onclick="copyLink('${esc(id)}')">COPIAR ID / LINK</button>`;
+    document.getElementById('letter').value='';
+    document.getElementById('name').value='';
+    document.getElementById('country').value='';
+    if(document.getElementById('consentToShare')) document.getElementById('consentToShare').checked=false;
+    if(document.getElementById('website')) document.getElementById('website').value='';
+    setDatabaseState(true,'Envio por Edge Function');
+    toast('Carta recebida pelo arquivo. ✦');
+  }catch(error){
+    console.error('saveLetter error:',error);
+    const raw=String(error?.message||'');
+    let message='Não conseguimos guardar sua carta agora. Tente novamente.';
+    if(raw==='FUNCTION_AUTH') message='O serviço de envio ainda está terminando de ser configurado. Tente novamente em alguns instantes.';
+    else if(raw==='country_required') message='Coloque seu país para guardar a carta.';
+    else if(raw==='letter_too_short') message='Sua carta precisa ter pelo menos 20 caracteres.';
+    else if(raw==='letter_too_long') message='Sua carta ficou grande demais. Tente deixá-la com até 12.000 caracteres.';
+    else if(raw==='invalid_target') message='O destinatário escolhido não é válido.';
+    else if(raw==='spam_detected') message='Não foi possível enviar esta carta.';
+    else if(raw==='MISSING_ID') message='A carta foi recebida, mas o banco não devolveu o número dela. Não envie novamente ainda.';
+    else if(raw) message='Falha no envio: '+raw;
+    toast(message);
+  }finally{
+    if(button){button.disabled=false;button.textContent='GUARDAR CARTA ✨';}
+  }
+}
+async function copyLink(id){
+  const url=location.origin+location.pathname+'#letter-'+encodeURIComponent(id);
+  try{await navigator.clipboard.writeText(url);toast('Link da carta copiado!');}
+  catch{toast('Copie este endereço: '+url)}
+}
+
+function toast(t){const x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2800)}
+
+async function renderEras(){
+  document.getElementById('eras').innerHTML=eras.map((e,i)=>{const img=e.img?`<div class="era-image"><img src="${e.img}" alt="Imagem da era ${esc(e.title)}" loading="lazy" onerror="this.closest('.era-image').classList.add('image-missing'); this.style.display='none'"><div class="image-credit">${esc(e.credit)} · <a href="${e.src}" target="_blank" rel="noopener">fonte</a></div></div>`:`<div class="era-image" style="display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#8b53e5 0 8%,#3c1b67 28%,#0a0610 68%);min-height:340px"><div style="text-align:center;position:relative"><div style="font-size:4.3rem;opacity:.8">🐋</div><div style="margin-top:9px;letter-spacing:.25em;font-size:.7rem;color:#d8c2ff">BTS + ARMY</div><div class="image-credit" style="left:50%;transform:translateX(-50%);bottom:-42px;white-space:nowrap">${esc(e.credit)} · <a href="${e.src}" target="_blank" rel="noopener">fonte</a></div></div></div>`;return `<article class="era ${e.cls}"><div class="era-grid">${img}<div class="era-copy"><div class="year">${esc(e.year)}</div><h3>${esc(e.title)}</h3><p class="lead">${esc(e.feeling)}</p><p class="context">${esc(e.context)}</p><div class="label">LANÇAMENTOS · ORDEM CRONOLÓGICA</div><div class="release-row">${e.releases.map(r=>`<span class="release">${esc(r)}</span>`).join('')}</div><div class="label">MÚSICAS QUE MARCAM O CAPÍTULO</div><div class="songs">${e.songs.map(s=>`<span class="song">${esc(s)}</span>`).join('')}</div><div class="scene">${e.scene.map(s=>`<span>✦ ${esc(s)}</span>`).join('')}</div><div class="army-note"><strong>O que fica para ARMY:</strong> ${esc(e.note)}</div>${e.link?`<div style="margin-top:17px"><a class="btn" href="${e.link}" target="_blank" rel="noopener">VER FONTE / MV ↗</a></div>`:''}</div></div></article>`}).join('')}
+
+async function init(){
+  // Renderização local primeiro: a navegação nunca depende da conexão com o banco.
+  renderLetters();
+  await renderEras();
+  checkDatabase().then(ok=>{ if(ok && document.getElementById('read')?.classList.contains('active')) loadLetters(); });
+  const hash=decodeURIComponent(location.hash||'');
+  if(hash.startsWith('#letter-')){
+    const id=hash.slice(8);
+    go('read');
+    openLetter(id);
+  }
+}
+
+init();
+</script>
+</body>
+</html>
